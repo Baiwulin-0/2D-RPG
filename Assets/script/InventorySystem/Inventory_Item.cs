@@ -69,13 +69,21 @@ public class Inventory_Item
 
     public string GetItemInfo()
     {
+        StringBuilder sb = new StringBuilder();
+
         if (itemData.itemType == ItemType.Material)
-            return "Used for crafting.";
+        {
+            sb.AppendLine("Used for crafting.");
+            
+            return sb.ToString();
+        }
 
         if (itemData.itemType == ItemType.Consumable)
-            return itemData.itemEffect.effectDescription;
-
-        StringBuilder sb = new StringBuilder();
+        {
+            sb.AppendLine(itemEffect.effectDescription);
+            
+            return sb.ToString();
+        }
 
         foreach (var mod in modifiers)
         {
@@ -90,6 +98,7 @@ public class Inventory_Item
             sb.AppendLine("独特机制：");
             sb.AppendLine(itemEffect.effectDescription);
         }
+
 
         return sb.ToString();
     }
