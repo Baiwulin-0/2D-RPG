@@ -21,7 +21,7 @@ public class Inventory_Player : Inventory_Base
 
     public void TryEquipItem(Inventory_Item item)
     {
-        var inventoryItem = Finditem(item.itemData);
+        var inventoryItem = Finditem(item);
         var matchingSlots = equipList.FindAll(slot => slot.slotType == item.itemData.itemType);
 
         foreach (var slot in matchingSlots)

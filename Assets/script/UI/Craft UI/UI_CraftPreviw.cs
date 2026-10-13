@@ -33,10 +33,9 @@ public class UI_CraftPreviw : MonoBehaviour
             return;
         }
 
-        if (storage.HasEnoughMaterials(itemToCraft) && storage.playerInventory.CanAddItem(itemToCraft))
+        if (storage.CanCraftItem(itemToCraft))
         {
-            storage.ConsumedMaterials(itemToCraft);
-            storage.playerInventory.AddItem(itemToCraft);
+            storage.CraftItem(itemToCraft);
         }
 
         UpdateCraftPreviwSlots();
