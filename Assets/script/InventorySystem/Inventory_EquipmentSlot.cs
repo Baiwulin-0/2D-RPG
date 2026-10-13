@@ -10,5 +10,8 @@ public class Inventory_EquipmentSlot
 
     public bool HasItem() => equipedItem != null && equipedItem.itemData != null;
 
-
+    public Inventory_Item GetEquipedItem()
+    {
+        return equipedItem;
+    }
 }
