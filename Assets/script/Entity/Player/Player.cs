@@ -14,6 +14,8 @@ public class Player : Entity
     public Entity_Health health { get; private set; }
     public Entity_StatusHandler statusHandler { get; private set; }
     public Player_Combat combat { get; private set; }
+    public Inventory_Player inventory { get; private set; }
+    public Player_Stats stats { get; private set; }
 
 
     #region State Variables
@@ -73,6 +75,8 @@ public class Player : Entity
         skillManager = GetComponent<Player_SkillManager>();
         statusHandler = GetComponent<Entity_StatusHandler>();
         combat = GetComponent<Player_Combat>();
+        inventory = GetComponent<Inventory_Player>();
+        stats = GetComponent<Player_Stats>();
 
         input = new PlayerInputSet();
 
@@ -162,6 +166,9 @@ public class Player : Entity
         input.player.Spell.performed += ctx => skillManager.timeEcho.TryUseSkill();
 
         input.player.Interact.performed += ctx => TryInteract();
+
+        input.player.QuickItemSlot_1.performed += ctx => inventory.TryUseQuickItemInSlot(1);
+        input.player.QuickItemSlot_2.performed += ctx => inventory.TryUseQuickItemInSlot(2);
 
         input.player.ToggleSkillTreeUI.performed += ctx => ui.ToggleSkillTreeUI();
         input.player.ToggleInventoryUI.performed += ctx => ui.ToggleInventoryUI();
