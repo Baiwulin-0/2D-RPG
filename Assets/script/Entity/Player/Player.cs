@@ -79,6 +79,7 @@ public class Player : Entity
         stats = GetComponent<Player_Stats>();
 
         input = new PlayerInputSet();
+        ui.SetupControlsUI(input);
 
         idleState = new Player_idleState(this, stateMachine, "idle");
         moveState = new Player_MoveState(this, stateMachine, "move");
@@ -169,10 +170,6 @@ public class Player : Entity
 
         input.player.QuickItemSlot_1.performed += ctx => inventory.TryUseQuickItemInSlot(1);
         input.player.QuickItemSlot_2.performed += ctx => inventory.TryUseQuickItemInSlot(2);
-
-        input.player.ToggleSkillTreeUI.performed += ctx => ui.ToggleSkillTreeUI();
-        input.player.ToggleInventoryUI.performed += ctx => ui.ToggleInventoryUI();
-
 
     }
 

@@ -52,15 +52,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ToggleSkillTreeUI",
-                    "type": "Button",
-                    "id": "a228f237-03ef-4944-a26d-583b00e17a56",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Spell",
                     "type": "Button",
                     "id": "85d0ba2b-ffe0-4d1d-a43c-46b54bf11bbc",
@@ -91,15 +82,6 @@
                     "name": "UltimateSpell",
                     "type": "Button",
                     "id": "3f142e58-33c4-42ab-ae9a-ba4bf75919ee",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "ToggleInventoryUI",
-                    "type": "Button",
-                    "id": "c3df5331-c242-44cd-9b2b-18a9685e2342",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -235,17 +217,6 @@
                 },
                 {
                     "name": "",
-                    "id": "b28422ea-bf1c-4115-90d0-45ffa8109b54",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard &Mouse",
-                    "action": "ToggleSkillTreeUI",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "df5922f6-c7f3-4134-94f0-f513a370ba78",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -290,17 +261,6 @@
                 },
                 {
                     "name": "",
-                    "id": "1c70cfe0-1684-4baa-a6cf-176140709f5d",
-                    "path": "<Keyboard>/c",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard &Mouse",
-                    "action": "ToggleInventoryUI",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "ef87f682-9fa5-4389-8a86-bcc3dac6ac25",
                     "path": "<Keyboard>/f",
                     "interactions": "",
@@ -329,6 +289,94 @@
                     "processors": "",
                     "groups": ";Keyboard &Mouse",
                     "action": "QuickItemSlot_2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "7c4c22eb-ebef-4f17-859a-ecfe4a40709f",
+            "actions": [
+                {
+                    "name": "OptionsUI",
+                    "type": "Button",
+                    "id": "ecdaa037-0e0d-4878-8afd-40b0e9566d82",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "InventoryUI",
+                    "type": "Button",
+                    "id": "e4161c0b-753a-41e2-8f99-0a40c3ebb07e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SkillTreeUI",
+                    "type": "Button",
+                    "id": "534f6bb2-e88d-4e60-81dc-cf8daa6871fc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AlternativeInput",
+                    "type": "Button",
+                    "id": "cba346dc-7d4a-4316-8126-22d4b80cd7cb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6b9d6bdd-7140-4f62-8b1c-1cde493db751",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard &Mouse",
+                    "action": "OptionsUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a19f210-d3b8-4592-af0c-d319053395b3",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard &Mouse",
+                    "action": "InventoryUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f4a995f7-ce50-4e00-a5c2-1be0e3febf8e",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard &Mouse",
+                    "action": "SkillTreeUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d14389da-e2c8-4979-bc6b-27ab548a61f7",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlternativeInput",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
