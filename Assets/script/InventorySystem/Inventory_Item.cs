@@ -6,7 +6,6 @@ using UnityEngine;
 [Serializable]
 public class Inventory_Item
 {
-
     private string itemId;
     public ItemDataSO itemData;
     public int stackSize = 1;
