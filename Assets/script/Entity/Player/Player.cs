@@ -5,6 +5,7 @@ using System;
 
 public class Player : Entity
 {
+    public static Player instance;
     public static event Action OnPlayerDeath;
 
     public UI ui {  get; private set; }
@@ -68,6 +69,7 @@ public class Player : Entity
     protected override void Awake()
     {
         base.Awake();
+        instance = this;
 
         ui = FindAnyObjectByType<UI>();
         vfx = GetComponent<Player_VFX>();

@@ -2,13 +2,17 @@ using UnityEngine;
 using System.Collections.Generic;
 using System;
 using System.Resources;
+using Unity.VisualScripting;
 
-public class Inventory_Base : MonoBehaviour
+public class Inventory_Base : MonoBehaviour,ISaveable
 {
     protected Player player;
     public event Action OnInventoryChange;
     public int maxInventorySize = 10;
     public List<Inventory_Item> itemList = new List<Inventory_Item>();
+
+    [Header("ITEM DATA BASE")]
+    [SerializeField] protected ItemListDataSO itemDataBase;
 
     protected virtual void Awake()
     {
@@ -43,13 +47,9 @@ public class Inventory_Base : MonoBehaviour
     }
     public Inventory_Item FindStackable(Inventory_Item itemToAdd)
     {
-        List<Inventory_Item> stackableItems = itemList.FindAll(item => item.itemData == itemToAdd.itemData);
-        foreach(var stackableItem in stackableItems)
-        {
-            if (stackableItem.CanAddStack())
-                return stackableItem;
-        }
-        return null;
+        return itemList.Find(item => item.itemData == itemToAdd.itemData && item.CanAddStack());
+
+
     }
 
     public void AddItem(Inventory_Item itemToAdd)
@@ -97,4 +97,14 @@ public class Inventory_Base : MonoBehaviour
         return itemList.Find(Item => Item.itemData == itemToFind.itemData);
     }
     public void TriggerUpdateUI() => OnInventoryChange?.Invoke();
+
+    public virtual void LoadData(GameData data)
+    {
+        
+    }
+
+    public virtual void SaveData(ref GameData data)
+    {
+        
+    }
 }

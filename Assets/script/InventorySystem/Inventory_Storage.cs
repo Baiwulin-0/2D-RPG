@@ -113,18 +113,7 @@ public class Inventory_Storage : Inventory_Base
 
     public Inventory_Item StackableInStash(Inventory_Item itemToAdd)
     {
-        List<Inventory_Item> stackableItems = materialStash.FindAll(item => item.itemData == itemToAdd.itemData);
-
-        foreach (var stackable in stackableItems)
-        {
-            if (stackable.CanAddStack())
-            {
-                return stackable;
-            }
-
-        }
-
-        return null;
+        return materialStash.Find(item => item.itemData == itemToAdd.itemData && item.CanAddStack());
 
     }
 
@@ -170,4 +159,89 @@ public class Inventory_Storage : Inventory_Base
 
     }
 
+    public override void SaveData(ref GameData data)
+    {
+        base.SaveData(ref data);
+
+        data.storageItems.Clear();
+
+        foreach (var item in itemList)
+        {
+            if (item != null && item.itemData != null)
+            {
+                string saveId = item.itemData.saveId;
+
+                if (data.storageItems.ContainsKey(saveId) == false)
+                {
+                    data.storageItems[saveId] = 0;
+                }
+                data.storageItems[saveId] += item.stackSize;
+            }
+        }
+
+        data.storageMaterials.Clear();
+
+        foreach (var item in materialStash)
+        {
+            if (item != null && item.itemData != null)
+            {
+                string saveId = item.itemData.saveId;
+
+                if (data.storageMaterials.ContainsKey(saveId) == false)
+                {
+                    data.storageMaterials[saveId] = 0;
+                }
+                data.storageMaterials[saveId] += item.stackSize;
+            }
+        }
+    }
+
+    public override void LoadData(GameData data)
+    {
+        itemList.Clear();
+        materialStash.Clear();
+
+        foreach (var entry in data.storageItems)
+        {
+            string saveId = entry.Key;
+            int stackSize = entry.Value;
+
+            ItemDataSO itemData = itemDataBase.GetItemData(saveId);
+
+            if (itemData == null)
+            {
+                Debug.LogWarning("Item not found:" + saveId);
+                continue;
+            }
+
+            
+            for (int i = 0; i < stackSize; i++)
+            {
+                Inventory_Item itemToLoad = new Inventory_Item(itemData);
+                AddItem(itemToLoad);
+            }
+            
+        }
+
+        foreach (var entry in data.storageMaterials)
+        {
+            string saveId = entry.Key;
+            int stackSize = entry.Value;
+
+            ItemDataSO itemData = itemDataBase.GetItemData(saveId);
+
+            if (itemData == null)
+            {
+                Debug.LogWarning("Item not found:" + saveId);
+                continue;
+            }
+
+
+            for (int i = 0; i < stackSize; i++)
+            {
+                Inventory_Item itemToLoad = new Inventory_Item(itemData);
+                AddMaterialToStash(itemToLoad);
+            }
+        }
+    }
 }
