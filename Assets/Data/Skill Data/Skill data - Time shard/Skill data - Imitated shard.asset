@@ -12,12 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - Imitated shard
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
+  displayName: Imitated shard
+  description: adadasadada
+  icon: {fileID: 836678721, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   cost: 2
   unlockedByDefault: 0
   skillType: 2
   upgradeData:
     upgradeType: 7
-    cooldown: 4
-  displayName: Imitated shard
-  description: adadasadada
-  icon: {fileID: 836678721, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+    cooldown: 3
+    damageScale:
+      phyiscal: 1
+      elemental: 1
+      chillDuration: 3
+      chillSlowMultiplier: 0.2
+      burnDuration: 3
+      burnDamageScale: 1
+      shockDuration: 3
+      shockDamageScale: 1
+      shockCharge: 0.4

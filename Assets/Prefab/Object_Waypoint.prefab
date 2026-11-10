@@ -197,9 +197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'camp
-
-'
+  m_text: level_1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38f1058e3f373d844b7f6abbe5e4c834, type: 2}
   m_sharedMaterial: {fileID: -4238226933016252077, guid: 38f1058e3f373d844b7f6abbe5e4c834, type: 2}
@@ -285,8 +283,8 @@ GameObject:
   - component: {fileID: 4646968254976100759}
   - component: {fileID: 8699510864723464739}
   - component: {fileID: 2884438920343556891}
-  m_Layer: 0
-  m_Name: Onject_Waypoint - Enter - Level_1
+  m_Layer: 9
+  m_Name: Onject_Waypoint - Exit - Level_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,8 +321,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object_Waypoint
   transferToScene: Level_1
-  waypointType: 0
-  conntedWaypoint: 1
+  waypointType: 1
+  conntedWaypoint: 0
   respawnPoint: {fileID: 0}
   canBeTriggered: 1
 --- !u!61 &2884438920343556891

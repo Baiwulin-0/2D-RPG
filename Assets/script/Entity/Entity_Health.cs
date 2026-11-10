@@ -43,6 +43,11 @@ public class Entity_Health : MonoBehaviour, IDamagable
 
     }
 
+    protected virtual void Start()
+    {
+
+    }
+
     private void SetupHealth()
     {
         if (entityStats == null)

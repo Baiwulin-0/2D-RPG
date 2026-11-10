@@ -12,5 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd9c4fc193bcbe43bba1d8afd7fcb56, type: 3}
   m_Name: AUDIO DATABASE
   m_EditorClassIdentifier: Assembly-CSharp::AudioDatabaseSO
-  player: []
-  uiAudio: []
+  player:
+  - audioName: player_attackHit
+    clips:
+    - {fileID: 8300000, guid: c72e4322941378a49b1763659c871989, type: 3}
+    - {fileID: 8300000, guid: 75ef602ec511f3a468ec373b6a0de8eb, type: 3}
+    - {fileID: 8300000, guid: 7e5afcaeadcdeb0408cbbcde299167fb, type: 3}
+    maxVolume: 1
+  - audioName: player_attackMiss
+    clips:
+    - {fileID: 8300000, guid: 0f6ae70785d94914c8942f4167d0ce3a, type: 3}
+    - {fileID: 8300000, guid: 2cc6abed0db1eac408c0b1cd99c9b860, type: 3}
+    - {fileID: 8300000, guid: 920cf5d53c16f244eb6ffbb95c9adb7b, type: 3}
+    maxVolume: 1
+  uiAudio:
+  - audioName: button_click
+    clips:
+    - {fileID: 8300000, guid: 5cb8b0b7de3c59e4480ea76a42597ba9, type: 3}
+    maxVolume: 1
+  mainMenuMusic:
+  - audioName: playList_mainMenu
+    clips:
+    - {fileID: 8300000, guid: 97eeb9b1e12299f459f1d0f48c35ec97, type: 3}
+    maxVolume: 0.6
+  levelMusic:
+  - audioName: playList_levels
+    clips:
+    - {fileID: 8300000, guid: bf24916ae1cda304dbf5e761af9cb00f, type: 3}
+    maxVolume: 0.6
