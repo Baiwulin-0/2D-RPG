@@ -19,7 +19,7 @@ public class Player_QuestManager : MonoBehaviour,ISaveable
     }
 
 
-    public void tryGiveRewardFrom(RewardType npcType)
+    public void TryGetRewardFrom(RewardType npcType)
     {
         List<QuestData> getRewardQuests = new List<QuestData>();
 
@@ -59,6 +59,43 @@ public class Player_QuestManager : MonoBehaviour,ISaveable
                 dropManager.CreateItemDrop(item.itemData);
             }
         }
+    }
+
+    public bool HasCompletedQuest()
+    {
+        for (int i = 0; i < activeQuests.Count; i++)
+        {
+            QuestData quest = activeQuests[i];
+
+            if (quest.questDataSO.questType == QuestType.Delivery)
+            {
+                var requiredItem = quest.questDataSO.itemToDeliver;
+                var requiredAmount = quest.questDataSO.requiredAmount;
+
+                if (inventory.HasItemAmount(requiredItem, requiredAmount))
+                    return true;
+            }
+
+            if (quest.CanGetReward())
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    // 只查“这个 NPC 能发的奖励”，避免商人显示领取按钮却发不出任何东西
+    public bool HasCompletedQuest(RewardType npcType)
+    {
+        foreach (var quest in activeQuests)
+        {
+            if (quest == null || quest.questDataSO == null) continue;
+            if (quest.questDataSO.rewardType != npcType) continue;
+            if (quest.CanGetReward()) return true;
+        }
+
+        return false;
     }
 
     public void AddProgress(string questTargetId, int amount = 1)

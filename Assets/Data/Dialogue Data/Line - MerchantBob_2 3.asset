@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e548f11ef17624287362a5bb04beb1, type: 3}
+  m_Name: Line - MerchantBob_2 3
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueLineSO
+  dialogueGroundName: Merchant Bob
+  speaker: {fileID: 11400000, guid: 3bbb7a0a4caba9a4a92a528448b1863c, type: 2}
+  textLine:
+  - "\u4E0B\u6B21\u518D\u6765\uFF01"
+  playerChoiceAnswer: "\u4E0D\u4E86"
+  actionLine: 
+  actionType: 6
+  choiceLines: []

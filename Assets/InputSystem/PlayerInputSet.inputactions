@@ -333,6 +333,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DialogueInteraction",
+                    "type": "Button",
+                    "id": "ba9e55fc-dd2a-424c-9ca0-23524149d3ff",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dialoguenavigation",
+                    "type": "Button",
+                    "id": "ce3af244-6a0d-40d3-97f1-d9c5f89bc90a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -379,6 +397,50 @@
                     "action": "AlternativeInput",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "77bc0257-b103-438e-93b2-388e8ea82344",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard &Mouse",
+                    "action": "DialogueInteraction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "e00ba0e3-60d7-463d-bda5-b2f10dcac1f6",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dialoguenavigation",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "076a0e91-bbe9-48cd-9781-fc0e4c90c98f",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard &Mouse",
+                    "action": "Dialoguenavigation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "841e28eb-76c0-4809-8488-673aba23a116",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard &Mouse",
+                    "action": "Dialoguenavigation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
