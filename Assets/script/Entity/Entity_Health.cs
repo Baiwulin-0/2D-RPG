@@ -159,7 +159,7 @@ public class Entity_Health : MonoBehaviour, IDamagable
     protected virtual void Die()
     {
         isDead = true;
-        Debug.Log("entity die!!!!");
+        
         entity.EntityDeath();
         dropManager?.DropItems();
     }

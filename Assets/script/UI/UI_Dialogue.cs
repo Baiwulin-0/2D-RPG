@@ -102,8 +102,6 @@ public class UI_Dialogue : MonoBehaviour
             case DialogueActionType.PlayerMakeChoice:
                 if (currentChoices == null || currentChoices.Length == 0)
                 {
-                    Debug.LogWarning($"[Dialogue] \"{currentLine.name}\" 的 actionType 是 PlayerMakeChoice，" +
-                                     "但 choiceLines 是空的。请把这个资源的 actionType 改成 OpenQuest / OpenShop / CloseDialogue，或者补上选项。", currentLine);
                     ui.SwitchToInGameUI();
                     break;
                 }

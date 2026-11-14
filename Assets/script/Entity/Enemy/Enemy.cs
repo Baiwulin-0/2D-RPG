@@ -75,7 +75,7 @@ public class Enemy : Entity
         base.StopSlowDown();
 
     }
-    public void EnableCounterWindow(bool enable) => canBeStunned = enable;
+    public  void EnableCounterWindow(bool enable) => canBeStunned = enable;
     public override void EntityDeath()
     {
         base.EntityDeath();
@@ -90,8 +90,12 @@ public class Enemy : Entity
     }
     public void TryEnterBattleState(Transform player)
     {
+        if (health != null && health.isDead)
+            return;
+
         if (stateMachine.currentState == battleState || stateMachine.currentState == attackState)
             return;
+
         this.player = player;
         stateMachine.ChangeState(battleState);
     }
@@ -141,4 +145,10 @@ public class Enemy : Entity
     {
         Player.OnPlayerDeath -= HandlePlayerDeath;
     }
+
+    public void EnterDeath()
+    {
+        stateMachine.ChangeState(deadState);
+    }
+
 }

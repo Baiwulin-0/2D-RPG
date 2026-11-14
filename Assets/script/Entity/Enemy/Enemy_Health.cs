@@ -26,6 +26,9 @@ public class Enemy_Health : Entity_Health
         if (wasHit == false)
             return false;
 
+        if (isDead)
+            return true;
+
         if (damageDealer.CompareTag("Player"))//if(damageDealer.GetComponent<Player>() !=null)
         {
             enemy.TryEnterBattleState(damageDealer);
