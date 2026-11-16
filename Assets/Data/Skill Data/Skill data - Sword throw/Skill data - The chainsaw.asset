@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - The chainsaw
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: The chainsaw
-  description: The chainsawThe chainsaw
+  displayName: "\u56DE\u65CB\u5251"
+  description: "\u98DE\u5230\u6700\u8FDC\u8DDD\u79BB\u540E\u539F\u5730\u65CB\u8F6C\uFF0C\u6BCF\u79D2
+    6 \u6B21\u4F24\u5BB3\uFF0C\u6301\u7EED\u6700\u591A 3 \u79D2"
   icon: {fileID: 1180571360, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   cost: 1
   unlockedByDefault: 0
   skillType: 3
   upgradeData:
     upgradeType: 12
-    cooldown: 1
+    cooldown: 3
     damageScale:
       phyiscal: 0.2
       elemental: 0.2

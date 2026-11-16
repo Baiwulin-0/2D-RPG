@@ -18,5 +18,5 @@ MonoBehaviour:
   - "\u770B\u770B\u4F60\u7684\u5956\u52B1\u90FD\u6709\u4E9B\u4EC0\u4E48"
   playerChoiceAnswer: "\u6211\u6765\u62FF\u6211\u7684\u5956\u52B1"
   choiceLines: []
-  actionLine: 1
+  actionLine: "\u7ED9\uFF0C\u8FD9\u662F\u4F60\u7684\u5956\u52B1"
   actionType: 4

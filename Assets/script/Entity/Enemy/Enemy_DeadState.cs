@@ -1,3 +1,4 @@
+using System.Net;
 using UnityEngine;
 
 public class Enemy_DeadState : EnemyState
@@ -9,8 +10,6 @@ public class Enemy_DeadState : EnemyState
     public override void Enter()
     {
         //base.Enter();
-
-        
         anim.enabled = false;
 
         rb.gravityScale = 12;
@@ -19,6 +18,8 @@ public class Enemy_DeadState : EnemyState
         enemy.GetComponent<Collider2D>().enabled = false;
 
         stateMachine.SwitchOffStateMachine();
+
+        
     }
 
 }

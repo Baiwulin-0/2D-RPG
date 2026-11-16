@@ -24,7 +24,7 @@ public class SkillObject_TimeEcho : SkillObject_Base
         playerStats = echoManager.player.stats;
         damageScaleData = echoManager.damageScaleData;
         maxAttacks = echoManager.GetMaxAttacks();
-        playertransform = echoManager.transform.root;
+        playertransform = echoManager.player.transform;
         playerhealth = echoManager.player.health;
         skillManager = echoManager.skillManager;
         statusHandler = echoManager.player.statusHandler;

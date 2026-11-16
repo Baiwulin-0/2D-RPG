@@ -21,9 +21,7 @@ public class ItemEffect_IceBlastOnTakingDamage : ItemEffect_DataSO
         bool noCooldown = (Time.time >= lastTimeUsed + cooldown);
         float result = lastTimeUsed + cooldown;
         bool reachedThreshold = player.health.GetHealthPercent() <= healthPercenttrigger;
-        Debug.Log("lastTimeUsed + cooldown :"+ result +
-            "\nnoCooldown：" + noCooldown.ToString());
-        Debug.Log("reachedThreshold: " + reachedThreshold.ToString());
+
         if(noCooldown && reachedThreshold)
         {
             player.vfx.CreateEffectOf(iceBlastVfx, player.transform);

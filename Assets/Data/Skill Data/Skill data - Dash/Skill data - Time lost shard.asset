@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - Time lost shard
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: Time lost shard
-  description: 
+  displayName: "\u9057\u843D\u788E\u7247"
+  description: "\u5728\u51B2\u523A\u8D77\u70B9\u5236\u9020\u4E00\u4E2A\u788E\u7247"
   icon: {fileID: -1523476312, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   cost: 1
   unlockedByDefault: 0

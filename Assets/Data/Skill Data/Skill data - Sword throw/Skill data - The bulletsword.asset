@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - The bulletsword
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: The bulletsword
-  description: The bulletsword
+  displayName: "\u7A7F\u900F\u4E4B\u5251"
+  description: "\u98DE\u5251\u73B0\u5728\u53EF\u7A7F\u900F 2 \u4E2A\u654C\u4EBA"
   icon: {fileID: -1182860804, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   cost: 1
   unlockedByDefault: 0
   skillType: 3
   upgradeData:
     upgradeType: 13
-    cooldown: 1
+    cooldown: 3
     damageScale:
       phyiscal: 1
       elemental: 1

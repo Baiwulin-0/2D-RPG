@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - Echo step
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: Echo step
-  description: 
+  displayName: "\u56DE\u54CD\u4E4B\u6B65"
+  description: "\u5728\u51B2\u523A\u8D77\u70B9\u5236\u9020\u4E00\u4E2A\u5206\u8EAB\uFF0C\u8BE5\u5206\u8EAB\u884C\u4E3A\u7EE7\u627F"
   icon: {fileID: -490074431, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   cost: 1
   unlockedByDefault: 0

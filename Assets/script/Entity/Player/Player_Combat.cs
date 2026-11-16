@@ -9,7 +9,7 @@ public class Player_Combat : Entity_Combat
     {
 
         bool hasPerformedCounter = false;
-        foreach (var target in GetDetectedColliders())
+        foreach (var target in boxDetection.GetDetectedColliders())
         {
             ICounterable counterable = target.GetComponent<ICounterable>();
 

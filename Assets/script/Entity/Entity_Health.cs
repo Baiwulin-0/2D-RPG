@@ -127,6 +127,8 @@ public class Entity_Health : MonoBehaviour, IDamagable
 
     public void ReduceHealth(float damage)
     {
+        if (isDead) return;
+
         currentHealth -= damage;
 
         entityVfx?.PlayOnDamageVfx();
@@ -158,8 +160,10 @@ public class Entity_Health : MonoBehaviour, IDamagable
 
     protected virtual void Die()
     {
+        if (isDead) return;
+
         isDead = true;
-        Debug.Log("entity die!!!!");
+        
         entity.EntityDeath();
         dropManager?.DropItems();
     }

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - Time echo
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: Time echo
-  description: "\u65F6\u95F4\u56DE\u54CD"
+  displayName: "\u65F6\u95F4\u56DE\u54CD"
+  description: "\u751F\u6210\u4E00\u4E2A\u5206\u8EAB\uFF0C\u5565\u4E5F\u4E0D\u5E72\n-
+    \u4E5F\u8BB8\u53EF\u4EE5\u5438\u5F15\u706B\u529B"
   icon: {fileID: -1698427825, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
-  cost: 2
+  cost: 1
   unlockedByDefault: 0
   skillType: 1
   upgradeData:

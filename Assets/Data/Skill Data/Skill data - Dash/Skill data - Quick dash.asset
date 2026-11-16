@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - Quick dash
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: Quick dash
-  description: Quick dash
+  displayName: "\u8FC5\u6377\u51B2\u523A"
+  description: "\u4EE5\u6781\u5FEB\u7684\u901F\u5EA6\u5411\u524D\u65B9\u51B2\u523A\uFF0C\u671F\u95F4\u65E0\u6CD5\u88AB\u654C\u4EBA\u51FB\u4E2D"
   icon: {fileID: -1369610445, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   cost: 0
   unlockedByDefault: 1

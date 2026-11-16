@@ -12,7 +12,7 @@ public class SaveManager : MonoBehaviour
     private GameData gameData;
     private List<ISaveable> allSaveables;
 
-    [SerializeField] private string fileName = "unityalexdev.json";
+    [SerializeField] private string fileName = "unityRPG_2D.json";
     [SerializeField] private bool encryptData = true;
 
     private void Awake()
@@ -38,7 +38,6 @@ public class SaveManager : MonoBehaviour
         {
             Debug.Log("没有保存的数据，创建一个！");
             gameData = new GameData();
-            return;
         }
 
         foreach (var saveable in allSaveables)

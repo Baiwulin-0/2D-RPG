@@ -123,7 +123,7 @@ public class Skill_SwordThrow : Skill_Base
 
         Vector2 predictedPoint = (initialVelocity * t) + gravityEffect;
 
-        Vector2 playerPosition = transform.root.position;
+        Vector2 playerPosition = player.transform.position;
 
         return playerPosition + predictedPoint;
     }

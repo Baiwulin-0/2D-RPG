@@ -12,12 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - Mirrored shards
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  cost: 3
+  displayName: "\u955C\u50CF\u788E\u7247"
+  description: "3 \u5C42\u5145\u80FD\uFF1A\u6BCF\u6B21\u65BD\u653E\u6D88\u8017 1
+    \u5C42\u53D1\u5C04\u8FFD\u8E2A\u788E\u7247\uFF1B\u6BCF 3 \u79D2\u56DE 1 \u5C42"
+  icon: {fileID: 1392627519, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+  cost: 1
   unlockedByDefault: 0
   skillType: 2
   upgradeData:
     upgradeType: 8
     cooldown: 3
-  displayName: Mirrored shards
-  description: Mirrored shards
-  icon: {fileID: 1392627519, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+    damageScale:
+      phyiscal: 1
+      elemental: 1
+      chillDuration: 3
+      chillSlowMultiplier: 0.2
+      burnDuration: 3
+      burnDamageScale: 1
+      shockDuration: 3
+      shockDamageScale: 1
+      shockCharge: 0.4
