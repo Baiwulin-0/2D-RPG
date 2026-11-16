@@ -3,7 +3,7 @@ using UnityEngine;
 public class Skill_Dash : Skill_Base
 {
     
-
+    //冲刺起步效果
     public void OnStartEffect()
     {
         if(Unlocked(SkillUpgradeType.Dash_CloneOnStart) || Unlocked(SkillUpgradeType.Dash_CloneStartAndArrival))
@@ -12,6 +12,8 @@ public class Skill_Dash : Skill_Base
         if(Unlocked(SkillUpgradeType.Dash_ShardOnShart) || Unlocked(SkillUpgradeType.Dash_ShardOnStartAndArrival))
             CreateShard();
     }
+
+    //冲刺结尾效果
     public void OnEndEffect()
     {
         if (Unlocked(SkillUpgradeType.Dash_CloneStartAndArrival))

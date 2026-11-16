@@ -3,32 +3,27 @@ using UnityEngine;
 
 public class Entity_Combat : MonoBehaviour
 {
+    [SerializeField]protected BoxDetector boxDetection;
+    [SerializeField]protected CircleDetector circleDetection;
     public event Action<float> OnDoingPhysicalDamage;
 
-    private Entity_SFX sfx;
-    private Entity_VFX vfx;
-    private Entity_Stats stats;
+    protected Entity_SFX sfx;
+    protected Entity_VFX vfx;
+    protected Entity_Stats stats;
 
     public DamageScaleData basicAttackScale;
 
-    [Header("Target detection")]
-    [SerializeField] private Transform targetCheck;
-    [SerializeField] private float targetCheckRadius = 1;
-    [SerializeField] private LayerMask whatIsTarget;
 
-
-
-
-    private void Awake()
+    protected virtual void Awake()
     {
         vfx = GetComponent<Entity_VFX>();
         sfx = GetComponent<Entity_SFX>();
         stats = GetComponent<Entity_Stats>();
     }
-    public void PerformAttack()
+    public virtual void PerformAttack()
     {
         bool targetGotHit = false;
-        foreach(var target in GetDetectedColliders())
+        foreach(var target in boxDetection.GetDetectedColliders())
         {
             IDamagable damagable = target.GetComponent<IDamagable>();
 
@@ -60,16 +55,10 @@ public class Entity_Combat : MonoBehaviour
             sfx?.PlayAttackMiss();
     }
 
-
-    protected Collider2D[] GetDetectedColliders()
+    //供子类调用的保护方法
+    protected void InvokeOnDoingPhysicalDamage(float damage)
     {
-        return Physics2D.OverlapCircleAll(targetCheck.position, targetCheckRadius, whatIsTarget);
+        OnDoingPhysicalDamage?.Invoke(damage);
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(targetCheck.position, targetCheckRadius);
-    }
-    
 
 }

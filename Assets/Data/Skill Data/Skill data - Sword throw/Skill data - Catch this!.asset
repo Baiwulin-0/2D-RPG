@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - Catch this!
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: Catch this!
-  description: Catch this!Catch this!
+  displayName: "\u63A5\u4F4F\uFF01"
+  description: "\u57FA\u7840\u98DE\u5251\uFF1A\u671D\u9F20\u6807\u65B9\u5411\u629B\u51FA\uFF0C\u547D\u4E2D\u9020\u6210
+    1.0 \u500D\u4F24\u5BB3\uFF0C\u518D\u6309\u4E00\u6B21\u53EC\u56DE\u3002\n - \u829C\u6E56\u8D77\u98DE "
   icon: {fileID: 1025091068, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   cost: 1
   unlockedByDefault: 0
-  skillType: 0
+  skillType: 3
   upgradeData:
-    upgradeType: 0
-    cooldown: 1
+    upgradeType: 11
+    cooldown: 3
     damageScale:
       phyiscal: 1
       elemental: 1

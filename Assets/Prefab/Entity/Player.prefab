@@ -288,6 +288,8 @@ GameObject:
   - component: {fileID: 8503352956240942683}
   - component: {fileID: 6900253292553979081}
   - component: {fileID: 585631983305374462}
+  - component: {fileID: 8696145035118624764}
+  - component: {fileID: 6950662859458334151}
   - component: {fileID: 7944212371499950057}
   - component: {fileID: 5440880358419591583}
   - component: {fileID: 8523680171307471619}
@@ -320,6 +322,7 @@ Transform:
   - {fileID: 914392472908217492}
   - {fileID: 5190379400729355160}
   - {fileID: 7762413307027388810}
+  - {fileID: 6444220559193439083}
   - {fileID: 7158668119524768497}
   - {fileID: 8681241982840043419}
   - {fileID: 166563167577887831}
@@ -337,6 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec5fb97746e85842ac8190c350907c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  isBoss: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -457,6 +461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b84a409015866f468e6076b6238a25b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Combat
+  boxDetection: {fileID: 8696145035118624764}
+  circleDetection: {fileID: 6950662859458334151}
   basicAttackScale:
     phyiscal: 1
     elemental: 1
@@ -467,12 +473,42 @@ MonoBehaviour:
     shockDuration: 3
     shockDamageScale: 1
     shockCharge: 0.4
-  targetCheck: {fileID: 7762413307027388810}
-  targetCheckRadius: 1
+  counterRecovvery: 0.25
+--- !u!114 &8696145035118624764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3301362238241458203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523594f670409b14eb476b66ef6912da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoxDetector
+  targetCheck: {fileID: 6444220559193439083}
+  size: {x: 2, y: 2}
+  angle: 0
   whatIsTarget:
     serializedVersion: 2
     m_Bits: 256
-  counterRecovvery: 0.25
+--- !u!114 &6950662859458334151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3301362238241458203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6488518dfd1cdbe4c8df435d913b0881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CircleDetector
+  targetCheck: {fileID: 7762413307027388810}
+  radius: 1
+  whatIsTarget:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &7944212371499950057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,7 +979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7762413307027388810}
   m_Layer: 7
-  m_Name: TargetCheck
+  m_Name: CircleTargetCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1150,6 +1186,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7812725159519733773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6444220559193439083}
+  m_Layer: 7
+  m_Name: BoxTargetCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6444220559193439083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812725159519733773}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.57, y: -0.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4120381534580425548}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8286211804541267740
 GameObject:
   m_ObjectHideFlags: 0

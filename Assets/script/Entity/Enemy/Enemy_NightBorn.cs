@@ -52,6 +52,7 @@ public class Enemy_NightBorn : Enemy, ICounterable
 
     public override void EntityDeath()
     {
+        SetSelfDestruct(true);
         stateMachine.ChangeState(selfDestructState);
     }
 

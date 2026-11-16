@@ -25,14 +25,6 @@ public class Enemy_NightBornDestructState : EnemyState
     public override void Exit()
     {
         base.Exit(); // 务必保留
-        Debug.Log("退出自爆状态！被切到了: " + stateMachine.currentState.GetType().Name);
     }
 
-    // 通过动画事件调用这个方法
-    public void TriggerExplosionDamage()
-    {
-        Debug.Log("自爆伤害判定触发！");
-        // 在这里执行范围伤害、特效，并销毁自身
-        // Object.Destroy(enemy.gameObject);
-    }
 }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - Time wap
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: Time wap
-  description: Time wapTime wap
+  displayName: "\u65F6\u95F4\u626D\u66F2"
+  description: "\u5C55\u5F00\u9886\u57DF\uFF0C\u6301\u7EED 5 \u79D2\uFF0C\u5708\u5185\u654C\u4EBA\u51CF\u901F"
   icon: {fileID: 400477540, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   cost: 1
   unlockedByDefault: 0

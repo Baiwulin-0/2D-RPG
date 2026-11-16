@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7ae7f3168256e43b488a10fc7cbf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveManager
-  fileName: unityalexdev.json
+  fileName: unityRPG_2D.json
   encryptData: 0

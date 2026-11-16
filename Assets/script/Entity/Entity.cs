@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    [SerializeField] protected bool isBoss;
     public event Action OnFlipped;
     public Animator anim {  get; private set; }
     public Rigidbody2D rb { get; private set; }
@@ -103,7 +104,7 @@ public class Entity : MonoBehaviour
 
     public virtual void EntityDeath()
     {
-
+        GetComponent<Entity_StatusHandler>()?.RemoveAllNegativeEffects();
     }
 
     public void SetVelocity(float velocity_x, float velocity_y)
@@ -160,5 +161,10 @@ public class Entity : MonoBehaviour
         {
         Gizmos.DrawLine(secondaryWallCheck.position, secondaryWallCheck.position + new Vector3(wallCheckDistance * facingDir, 0));
         }
+    }
+
+    public bool IsBoss()
+    {
+        return isBoss;
     }
 }

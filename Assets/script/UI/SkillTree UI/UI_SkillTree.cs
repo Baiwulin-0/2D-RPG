@@ -67,6 +67,9 @@ public class UI_SkillTree : MonoBehaviour, ISaveable
 
     public void LoadData(GameData data)
     {
+        if (skillManager == null)
+            return;
+
         skillPoints = data.skillPoints;
 
         foreach (var node in allTreeNodes)

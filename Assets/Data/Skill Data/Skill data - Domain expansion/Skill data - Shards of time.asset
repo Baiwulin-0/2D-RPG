@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - Shards of time
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: Shards of time
-  description: Shards of timeShards of time
+  displayName: "\u65F6\u4E4B\u788E\u7247\u96E8"
+  description: "\u9886\u57DF\u6301\u7EED 8 \u79D2\uFF0C\u5411\u968F\u673A\u88AB\u56F0\u654C\u4EBA\u53D1\u5C04\u6570\u679A\u8FFD\u8E2A\u788E\u7247"
   icon: {fileID: 740668161, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   cost: 1
   unlockedByDefault: 0

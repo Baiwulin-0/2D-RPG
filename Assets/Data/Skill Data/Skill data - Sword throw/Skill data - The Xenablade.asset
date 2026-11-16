@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - The Xenablade
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: The Xenablade
-  description: The Xenablade
+  displayName: "\u5F02\u754C\u4E4B\u5203"
+  description: "\u547D\u4E2D\u540E\u5F39\u5C04\uFF0C\u6700\u591A\u5F39 5 \u6B21\uFF0C\u5F39\u5C04\u901F\u5EA6
+    12"
   icon: {fileID: -878758905, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
-  cost: 1
+  cost: 3
   unlockedByDefault: 0
   skillType: 3
   upgradeData:
     upgradeType: 14
-    cooldown: 1
+    cooldown: 3
     damageScale:
       phyiscal: 1
       elemental: 1

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c165dd20fee6742b7f6e9bc207f7aa, type: 3}
   m_Name: Skill data - Cleanse wisp
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  displayName: Cleanse wisp
-  description: "\u6211\u73B0\u5728\u8FD8\u4E0D\u77E5\u9053"
+  displayName: "\u51C0\u5316\u4E4B\u7075"
+  description: "\u5149\u7403\u98DE\u5411\u73A9\u5BB6\u65F6\u6E05\u9664\u6240\u6709\u8D1F\u9762\u6548\u679C"
   icon: {fileID: -2108229982, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   cost: 1
   unlockedByDefault: 0
